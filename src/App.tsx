@@ -1,7 +1,6 @@
 import { Cable, Camera, Wifi, Phone, ArrowRight, Mail } from 'lucide-react';
 import { Button } from './components/ui/button';
 import { Input } from './components/ui/input';
-import logo from 'omnilogometal.png';
 
 export default function App() {
   return (
@@ -10,7 +9,7 @@ export default function App() {
       <section className="relative bg-black px-6 py-12 md:py-20">
         <div className="mx-auto max-w-3xl text-center">
           <img 
-            src={logo} 
+            src="/omnilogometal.png" 
             alt="Omnitrix Logo" 
             className="mx-auto mb-6 h-24 w-24 md:h-32 md:w-32"
           />

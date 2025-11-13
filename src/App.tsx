@@ -141,7 +141,7 @@ export default function App() {
               <img 
                 src="/omnilogometal.png" 
                 alt="Omnitrix Logo" 
-                className="h-32 w-32 md:h-40 md:w-40 rounded-full object-cover bg-neutral-800 border-2 border-neutral-700 p-4"
+                className="h-32 w-32 md:h-40 md:w-40"
               />
             </div>
             <div className="flex-1 text-center md:text-left">

@@ -20,7 +20,7 @@ export default function App() {
     const link = document.querySelector("link[rel*='icon']") as HTMLLinkElement || document.createElement('link');
     link.type = 'image/png';
     link.rel = 'icon';
-    link.href = '/omnilogometal.png';
+    link.href = '/favi32.png';
     document.head.appendChild(link);
   }, []);
 
@@ -80,7 +80,7 @@ export default function App() {
           <img
             src="/omnilogometal.png"
             alt="Omnitrix Logo"
-            className="mx-auto mb-6 h-24 w-24 md:h-32 md:w-32"
+            className="mx-auto mb-6 h-24 w-24 md:h-32 md:w-32 object-contain"
           />
           <h1 className="mb-4 text-white text-4xl md:text-5xl font-bold leading-tight">
             Supporting Tomorrow's Infrastructure
@@ -245,7 +245,7 @@ export default function App() {
               <img
                 src="/omnilogometal.png"
                 alt="Omnitrix Logo"
-                className="h-32 w-32 md:h-40 md:w-40"
+                className="h-32 w-32 md:h-40 md:w-40 object-contain"
               />
             </div>
             <div className="flex-1 text-center md:text-left">

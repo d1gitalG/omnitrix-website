@@ -630,6 +630,10 @@
     background-color: var(--secondary);
   }
 
+  .object-contain {
+    object-fit: contain;
+  }
+
   .px-3 {
     padding-inline: calc(var(--spacing) * 3);
   }

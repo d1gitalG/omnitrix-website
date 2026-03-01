@@ -340,14 +340,39 @@ export default function App() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <Input
-                type="text"
-                placeholder="Service Type (optional)"
-                name="serviceType"
-                value={formData.serviceType}
-                onChange={handleChange}
-                className="h-12 rounded-md border-neutral-800 bg-neutral-900 text-white placeholder:text-neutral-500"
-              />
+              <div>
+                <select
+                  name="serviceType"
+                  value={formData.serviceType}
+                  onChange={(e) =>
+                    setFormData((prev) => ({
+                      ...prev,
+                      serviceType: e.target.value,
+                    }))
+                  }
+                  className="h-12 w-full rounded-md border border-neutral-800 bg-neutral-900 text-white px-3 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+                >
+                  <option value="" className="bg-neutral-900">
+                    Service Type (optional)
+                  </option>
+                  <option value="Structured Cabling" className="bg-neutral-900">
+                    Structured Cabling
+                  </option>
+                  <option value="Security Cameras" className="bg-neutral-900">
+                    Security Cameras
+                  </option>
+                  <option value="Wi-Fi & Networking" className="bg-neutral-900">
+                    Wi-Fi & Networking
+                  </option>
+                  <option value="VoIP & Phone Systems" className="bg-neutral-900">
+                    VoIP & Phone Systems
+                  </option>
+                  <option value="Other" className="bg-neutral-900">
+                    Other
+                  </option>
+                </select>
+              </div>
+
               <Input
                 type="text"
                 placeholder="Job Address (optional)"

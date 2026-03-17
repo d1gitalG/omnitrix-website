@@ -29,24 +29,24 @@ export default function Footer() {
             <p className="mt-1 text-neutral-400 text-xs leading-relaxed max-w-[180px]">Supporting Tomorrow's Infrastructure</p>
           </div>
 
-          <div className="md:text-right">
+          <div>
             <p className="text-neutral-300 text-xs font-semibold uppercase tracking-[0.18em]">Contact &amp; Coverage</p>
             <div className="mt-4 flex flex-col gap-3 text-sm text-neutral-400">
               <a
                 href="mailto:info@omnitrix.tech"
-                className="inline-flex items-center justify-center gap-2 hover:text-white transition-colors md:justify-end"
+                className="flex items-center justify-center gap-2 hover:text-white transition-colors md:justify-start"
               >
                 <Mail className="h-4 w-4 text-green-500 flex-shrink-0" />
                 info@omnitrix.tech
               </a>
               <a
                 href="tel:+13022654662"
-                className="inline-flex items-center justify-center gap-2 hover:text-white transition-colors md:justify-end"
+                className="flex items-center justify-center gap-2 hover:text-white transition-colors md:justify-start"
               >
                 <Phone className="h-4 w-4 text-green-500 flex-shrink-0" />
                 (302) 265-4662
               </a>
-              <div className="pt-1 text-neutral-300 space-y-1">
+              <div className="pt-1 space-y-1">
                 <p>Maryland</p>
                 <p>Northern Virginia</p>
                 <p>Washington, DC</p>

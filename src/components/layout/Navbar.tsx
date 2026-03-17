@@ -1,94 +1,55 @@
-import { useState } from 'react';
-import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Link, NavLink } from 'react-router-dom';
 
 const navLinks = [
   { to: '/', label: 'Home' },
   { to: '/services', label: 'Services' },
   { to: '/how-we-deliver', label: 'How We Deliver' },
-  { to: '/coverage', label: 'Coverage & Compliance' },
+  { to: '/coverage', label: 'Coverage' },
   { to: '/about', label: 'About' },
-  { to: '/capability-statement', label: 'Capability Statement' },
-  { to: '/contact', label: 'Start a Project' },
+  { to: '/capability-statement', label: 'Capability' },
 ];
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
-  const location = useLocation();
-
   return (
-    <header className="sticky top-0 z-50 bg-black border-b border-neutral-800">
-      <div className="mx-auto max-w-6xl px-6 h-16 flex items-center justify-between">
-        {/* Logo / Wordmark */}
-        <Link to="/" className="flex items-center gap-3 group" onClick={() => setOpen(false)}>
+    <header className="sticky top-0 z-50 border-b border-neutral-800/80 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/85">
+      <div className="mx-auto flex min-h-16 max-w-7xl items-center gap-4 px-4 py-3 sm:px-6">
+        <Link to="/" className="group flex min-w-0 items-center gap-3 shrink-0 mr-2">
           <img
             src="/omnilogometal.png"
             alt="Omnitrix"
-            className="h-8 w-8 object-contain flex-shrink-0"
+            className="h-8 w-8 shrink-0 object-contain"
           />
-          <span className="text-white font-semibold text-base leading-tight group-hover:text-green-400 transition-colors">
+          <span className="truncate text-base font-semibold leading-tight text-white transition-colors group-hover:text-green-400">
             Omnitrix
           </span>
         </Link>
 
-        {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-1">
-          {navLinks.slice(0, -1).map((l) => (
+        <nav className="flex min-w-0 flex-1 flex-wrap items-center gap-1">
+          {navLinks.map((link) => (
             <NavLink
-              key={l.to}
-              to={l.to}
-              end={l.to === '/'}
+              key={link.to}
+              to={link.to}
+              end={link.to === '/'}
               className={({ isActive }) =>
-                `px-3 py-2 rounded text-sm transition-colors ${
+                `relative px-3 py-2 text-sm font-medium transition-colors ${
                   isActive
-                    ? 'text-green-400 bg-green-950'
-                    : 'text-neutral-400 hover:text-white hover:bg-neutral-900'
+                    ? 'text-white after:absolute after:bottom-0 after:left-2 after:right-2 after:h-[2px] after:rounded-full after:bg-neutral-400 after:content-[""]'
+                    : 'text-neutral-400 hover:text-white'
                 }`
               }
             >
-              {l.label}
+              {link.label}
             </NavLink>
           ))}
-          <Link
-            to="/contact"
-            className="ml-3 px-4 py-2 rounded bg-green-500 hover:bg-green-600 text-black text-sm font-semibold transition-colors"
-          >
-            Start a Project
-          </Link>
         </nav>
 
-        {/* Mobile hamburger */}
-        <button
-          className="lg:hidden text-neutral-400 hover:text-white transition-colors"
-          onClick={() => setOpen(!open)}
-          aria-label="Toggle menu"
+        <Link
+          to="/contact"
+          className="ml-auto shrink-0 whitespace-nowrap rounded bg-green-500 px-4 py-2 text-sm font-semibold text-black transition-colors hover:bg-green-600"
         >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+          Start a Project
+        </Link>
       </div>
-
-      {/* Mobile menu */}
-      {open && (
-        <div className="lg:hidden bg-black border-t border-neutral-800 px-6 py-4 space-y-1">
-          {navLinks.map((l) => (
-            <NavLink
-              key={l.to}
-              to={l.to}
-              end={l.to === '/'}
-              onClick={() => setOpen(false)}
-              className={({ isActive }) =>
-                `block px-3 py-2.5 rounded text-sm transition-colors ${
-                  isActive
-                    ? 'text-green-400 bg-green-950'
-                    : 'text-neutral-300 hover:text-white hover:bg-neutral-900'
-                }`
-              }
-            >
-              {l.label}
-            </NavLink>
-          ))}
-        </div>
-      )}
     </header>
   );
 }

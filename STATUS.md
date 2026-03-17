@@ -1,43 +1,31 @@
 # Omnitrix Website — STATUS
 
-_Last updated: 2026-03-08_
+_Last updated: 2026-03-17_
 
 ## What this is
-Marketing / credibility site for Omnitrix.
+Multi-page marketing/credibility site for Omnitrix. Fully rewritten with the new Omnitrix repositioning as of 2026-03-16.
 
 ## Current status
 - **Status:** ACTIVE
-- **Phase:** SHIPPING
-- **Repo:** `omnitrix_repo/`
+- **Phase:** DEPLOY
+- **Repo:** `omnitrix_repo/` (local) + `d1gitalG/omnitrix-website` (GitHub)
 
 ## Done
-- Vite/React/Tailwind site exists and is ready for deployment work
-- Hosted-form approach is chosen over a custom backend
-- `VITE_WEB3FORMS_ACCESS_KEY` is already documented in `.env.example` / README
-- Deploy + contact form + lead-gen are explicitly tied together as the current shipping push
+- Full site rewrite with new Omnitrix repositioning (ops-heavy/professional tone)
+- Multi-page structure: Home, Services, How We Deliver, Coverage & Compliance, About, Capability Statement, Contact
+- React Router implemented, shared Layout/Navbar/Footer
+- `vercel.json` SPA rewrite rule in place
+- `@vitejs/plugin-react` pinned to `^4.3.4` for Vite 6 compatibility
+- Pushed to `d1gitalG/omnitrix-website` on GitHub
 
 ## Next action
-Deploy the latest build to Vercel, set `VITE_WEB3FORMS_ACCESS_KEY`, and submit one live form test to `info@omnitrix.tech`.
-
-## Next 3 tasks
-1. Create/verify the Vercel project and production URL
-2. Add the Web3Forms access key and wire the form submit path
-3. Submit one real test message and confirm it lands in `info@omnitrix.tech`
+Connect `d1gitalG/omnitrix-website` to Vercel, set `VITE_WEB3FORMS_ACCESS_KEY` env var, deploy, and run one live form test to `info@omnitrix.tech`.
 
 ## Blockers
-- Hosting/domain credentials may still be needed
-- Web3Forms key may need to be created or confirmed
-
-## Definition of done
-- Latest site is deployed to a stable production URL/domain
-- Contact form succeeds without console errors
-- A real submission arrives at `info@omnitrix.tech`
-- Basic spam protection / bot resistance is enabled
+- Gianni to connect Vercel project to the new GitHub repo
+- Web3Forms access key needs to be set as env var in Vercel dashboard
 
 ## Related files
 - `QUEUE.md`
 - `DEPLOY_RUNBOOK.md`
-- `project-state.json`
-- `NEXT.md`
-- `DECISIONS.md`
-- `README.md`
+- `vercel.json`

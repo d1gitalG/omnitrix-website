@@ -46,7 +46,7 @@ export default function Footer() {
                 <Phone className="h-4 w-4 text-green-500 flex-shrink-0" />
                 (302) 265-4662
               </a>
-              <div className="pt-1 space-y-1">
+              <div className="pt-1 space-y-1 text-neutral-400">
                 <p>Maryland</p>
                 <p>Northern Virginia</p>
                 <p>Washington, DC</p>

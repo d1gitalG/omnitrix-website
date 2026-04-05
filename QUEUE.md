@@ -11,5 +11,6 @@ _Last updated: 2026-03-17_
 - `OW-003` — `WAITING_ON_GIANNI` — Connect repo to Vercel and deploy
   - **DoD:** `d1gitalG/omnitrix-website` linked to Vercel, `VITE_WEB3FORMS_ACCESS_KEY` set, deploy succeeds, live form test arrives at `info@omnitrix.tech`.
 
-- `OW-004` — `READY` — Footer polish and logo sizing final pass
+- `OW-004` — `DONE` — Footer polish and logo sizing final pass
   - **DoD:** Footer looks balanced across desktop/mobile. Logo is consistent and proportional across all pages (Hero, About, Footer).
+  - **Done:** Increased logo size in Navbar (h-10, text-lg font-bold), Footer (h-14, text-xl font-bold), and About page (w-32/w-40). Normalized font-bold and tracking-tight on brand name.

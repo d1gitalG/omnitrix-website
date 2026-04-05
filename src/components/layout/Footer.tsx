@@ -23,9 +23,9 @@ export default function Footer() {
             <img
               src="/omnilogometal.png"
               alt="Omnitrix"
-              className="h-12 w-12 object-contain"
+              className="h-14 w-14 object-contain"
             />
-            <p className="mt-2 text-white text-lg font-semibold">Omnitrix</p>
+            <p className="mt-2 text-white text-xl font-bold tracking-tight">Omnitrix</p>
             <p className="mt-1 text-neutral-400 text-xs leading-relaxed max-w-[180px]">Supporting Tomorrow's Infrastructure</p>
           </div>
 

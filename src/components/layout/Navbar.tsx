@@ -34,8 +34,8 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link to="/" className="group flex shrink-0 items-center gap-3">
-          <img src="/omnilogometal.png" alt="Omnitrix" className="h-8 w-8 shrink-0 object-contain" />
-          <span className="text-base font-semibold leading-tight text-white transition-colors group-hover:text-green-400">
+          <img src="/omnilogometal.png" alt="Omnitrix" className="h-10 w-10 shrink-0 object-contain" />
+          <span className="text-lg font-bold tracking-tight text-white transition-colors group-hover:text-green-400">
             Omnitrix
           </span>
         </Link>
